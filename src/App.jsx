@@ -5,6 +5,7 @@ import WhoWeAre from "./Whoweare.jsx";
 import Whatwedo from "./Whatwedo.jsx";
 import { LanguageProvider } from './LanguageContext';
 import ContactUs from "./Contactus.jsx";
+import WhatsAppButton from "./Whatsappbutton.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Whatwedo />
       <ContactUs/>
       <Footer />
+      <WhatsAppButton/>
       </LanguageProvider>
     </>
   );
