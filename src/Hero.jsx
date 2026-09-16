@@ -5,10 +5,11 @@ import img1 from './Hero1/1.png';
 import img2 from './Hero1/2.png';
 import img3 from './Hero1/3.png';
 import img8 from './Hero1/8.png';
+import img11 from './Hero1/11.png';
 
 export default function Hero() {
   const { t } = useLanguage();
-  const slides = [img1, img2, img3, img8];
+  const slides = [img1, img2, img3, img8, img11];
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {

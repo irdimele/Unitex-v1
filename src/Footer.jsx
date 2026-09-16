@@ -71,7 +71,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="tel:0689084661"
+              href="tel:067 400 9956"
               className="hover:text-black transition-colors p-0.5"
               aria-label="Phone"
             >

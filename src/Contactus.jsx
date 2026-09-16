@@ -137,7 +137,7 @@ export default function ContactUs() {
 
             {/* Phone */}
             <a
-              href="tel:0689084661"
+              href="tel:0674009956"
               className="group flex items-center h-10 sm:h-11 bg-[#FF0000] hover:bg-red-700 text-white rounded-md px-3 cursor-pointer"
               aria-label="Phone"
             >
@@ -147,7 +147,7 @@ export default function ContactUs() {
               <div className="grid grid-cols-[0fr] group-hover:grid-cols-[1fr] group-focus:grid-cols-[1fr] transition-[grid-template-columns] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
                 <div className="overflow-hidden">
                   <span className="block pl-2 text-xs sm:text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 delay-100">
-                    068 908 4661
+                    067 400 9956
                   </span>
                 </div>
               </div>
