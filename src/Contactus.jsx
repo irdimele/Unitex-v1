@@ -18,7 +18,7 @@ export default function ContactUs() {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'de9197b1-39ce-485c-bbce-d70bb0c42878', // Your Access Key
+          access_key: '552c8695-5253-467b-9ce9-a07651f75cec', // Your Access Key
           name: formData.name,
           email: formData.email,
           message: formData.message,
