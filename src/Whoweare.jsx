@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img4 from './Hero1/4.png'; 
 import { useLanguage } from './LanguageContext';
 
 export default function WhoWeAre() {
   const { t } = useLanguage();
+  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <section id="1" className="w-full bg-white py-10 sm:py-16 md:py-20 px-4 sm:px-8 md:px-12 lg:px-4 ">
@@ -17,11 +18,19 @@ export default function WhoWeAre() {
         </h2>
 
         {/* Feature Image */}
-        <div className="w-full mb-6 sm:mb-8 md:mb-10">
+        <div className="relative w-full mb-6 sm:mb-8 md:mb-10 min-h-[200px] bg-gray-100 rounded-md">
+          {!isLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-10 h-10 border-4 border-gray-300 border-t-gray-800 rounded-full animate-spin" />
+            </div>
+          )}
           <img 
             src={img4} 
             alt="Textile accessories and tools" 
-            className="w-full h-auto object-cover rounded-md shadow-sm"
+            onLoad={() => setIsLoaded(true)}
+            className={`w-full h-auto object-cover rounded-md shadow-sm transition-opacity duration-300 ${
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           />
         </div>
 
