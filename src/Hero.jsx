@@ -11,6 +11,7 @@ export default function Hero() {
   const { t } = useLanguage();
   const slides = [img1, img2, img3, img8, img11];
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [loadedImages, setLoadedImages] = useState({});
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,7 +35,22 @@ export default function Hero() {
             ${index === currentSlide ? 'opacity-100' : 'opacity-0'}
           `}
           style={{ backgroundImage: `url(${slide})` }}
-        />
+        >
+          {/* Hidden image element to detect load completion */}
+          <img
+            src={slide}
+            alt=""
+            className="hidden"
+            onLoad={() => setLoadedImages((prev) => ({ ...prev, [slide]: true }))}
+          />
+
+          {/* Loading spinner overlay */}
+          {!loadedImages[slide] && (
+            <div className="absolute inset-0 flex items-center justify-center bg-[#f8f8f8]">
+              <div className="w-10 h-10 border-4 border-gray-300 border-t-gray-800 rounded-full animate-spin" />
+            </div>
+          )}
+        </div>
       ))}
 
       {/* Dark Overlay (Shadow Background) */}
